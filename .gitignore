@@ -1,0 +1,15 @@
+ExerciseWARModule/target/
+ExcerciseJARModule/target/
+ExerciseEARModule/target/
+.project
+ExerciseWARModule/.project
+ExcerciseJARModule/.project
+ExerciseEARModule/.project
+ExerciseWARModule/.classpath
+ExcerciseJARModule/.classpath
+ExerciseEARModule/.classpath
+.settings
+ExerciseWARModule/.settings
+ExcerciseJARModule/.settings
+ExerciseEARModule/.settings
+ExerciseWARModule/.tern-project
