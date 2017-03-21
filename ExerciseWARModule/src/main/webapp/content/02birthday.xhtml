@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <h:html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -7,11 +7,15 @@
 <h:head></h:head>
 <h:body>
 	<ui:composition>
-		<p>What year were you born?</p>
-		<p>
-			<a href="step03_summary.xhtml">Next</a>
-		</p>
+		<h:form id="form">
+			<p>What year were you born?</p>
+			<p>
+				<h:commandLink value="Next" action="#{userInfo.captureBirthday}"
+					id="next">
+					<f:ajax render="content form" />
+				</h:commandLink>
+			</p>
+		</h:form>
 	</ui:composition>
-
 </h:body>
 </h:html>
