@@ -20,14 +20,14 @@ public class UserInfo {
     }
 
     public void backToLandingPage() {
-        facePainter.setMainContent("content/01name.xhtml");
+        facePainter.setMainContent("/content/01name.xhtml");
     }
     
     public void captureUsername() {
-        facePainter.setMainContent("content/02birthday.xhtml");
+        facePainter.setMainContent("/content/02birthday.xhtml");
     }
 
     public void captureBirthday() {
-        facePainter.setMainContent("content/03summary.xhtml");
+        facePainter.setMainContent("/content/03summary.xhtml");
     }
 }

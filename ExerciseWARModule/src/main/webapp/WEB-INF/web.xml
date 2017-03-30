@@ -11,34 +11,50 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>/faces/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.jsf</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.faces</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
 
+	<welcome-file-list>
+		<welcome-file>view/index.html</welcome-file>
+	</welcome-file-list>
 	<security-constraint>
 		<web-resource-collection>
+			<web-resource-name>HTML</web-resource-name>
+			<url-pattern>*.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<web-resource-collection>
 			<web-resource-name>Allowed methods</web-resource-name>
-			<url-pattern>/*</url-pattern>
+			<url-pattern>/</url-pattern>
 			<http-method>GET</http-method>
 			<http-method>POST</http-method>
 		</web-resource-collection>
 		<auth-constraint>
-			<role-name>FullUser</role-name>
+			<role-name>fulluser</role-name>
+			<role-name>admin</role-name>
 		</auth-constraint>
 	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>XHTML</web-resource-name>
+			<url-pattern>*.xhtml</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
 	<security-role>
-		<role-name>Admin</role-name>
+		<role-name>admin</role-name>
+	</security-role>
+	<security-role>
+		<role-name>fulluser</role-name>
 	</security-role>
 
 	<login-config>

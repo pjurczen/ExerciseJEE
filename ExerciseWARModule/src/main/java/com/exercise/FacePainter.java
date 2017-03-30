@@ -7,7 +7,7 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class FacePainter {
 
-    private String mainContent = "content/01name.xhtml";
+    private String mainContent = "/content/01name.xhtml";
 
     public String getMainContent() {
         return mainContent;
